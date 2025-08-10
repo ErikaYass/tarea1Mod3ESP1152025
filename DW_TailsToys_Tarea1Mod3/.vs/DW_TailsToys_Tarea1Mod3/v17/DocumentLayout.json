@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9C02B54C-06B4-2D2A-456E-B64836D75A09}|DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3.dtproj|C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Package.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
-      "RelativeMoniker": "D:0:0:{9C02B54C-06B4-2D2A-456E-B64836D75A09}|DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3.dtproj|solutionrelative:DW_TailsToys_Tarea1Mod3\\Package.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+      "AbsoluteMoniker": "D:0:0:{9C02B54C-06B4-2D2A-456E-B64836D75A09}|DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3.dtproj|C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Leer DimDate.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{9C02B54C-06B4-2D2A-456E-B64836D75A09}|DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3.dtproj|solutionrelative:DW_TailsToys_Tarea1Mod3\\Leer DimDate.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,11 +19,11 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Package.dtsx [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Package.dtsx",
-              "RelativeDocumentMoniker": "DW_TailsToys_Tarea1Mod3\\Package.dtsx",
-              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Package.dtsx [Dise\u00F1o]",
-              "RelativeToolTip": "DW_TailsToys_Tarea1Mod3\\Package.dtsx [Dise\u00F1o]",
+              "Title": "Leer DimDate.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Leer DimDate.dtsx",
+              "RelativeDocumentMoniker": "DW_TailsToys_Tarea1Mod3\\Leer DimDate.dtsx",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Leer DimDate.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "DW_TailsToys_Tarea1Mod3\\Leer DimDate.dtsx [Dise\u00F1o]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
               "WhenOpened": "2025-08-10T21:12:08.047Z",
               "EditorCaption": " [Dise\u00F1o]"
