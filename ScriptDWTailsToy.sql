@@ -9,4 +9,13 @@ GO
 CREATE SCHEMA dw; 
 GO
 
+-- Creación de DIM DATE 
 
+CREATE TABLE dw.dim_date (
+    date_key INT PRIMARY KEY,
+    [date] DATE NOT NULL,
+    [day] INT NOT NULL,
+    [month] INT NOT NULL,
+    [year] INT NOT NULL
+);
+GO
