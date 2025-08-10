@@ -19,3 +19,16 @@ CREATE TABLE dw.dim_date (
     [year] INT NOT NULL
 );
 GO
+
+-- Creación de DIM PRODUCT
+
+CREATE TABLE dw.dim_product (
+    product_sk INT IDENTITY(1,1) PRIMARY KEY,
+    product_bk INT NOT NULL, -- ProductID del origen
+    product_sku NVARCHAR(50) NOT NULL,
+    product_name NVARCHAR(50) NOT NULL,
+    product_category NVARCHAR(50) NOT NULL,
+    item_group NVARCHAR(50) NOT NULL,
+    retail_price MONEY NOT NULL
+);
+GO
