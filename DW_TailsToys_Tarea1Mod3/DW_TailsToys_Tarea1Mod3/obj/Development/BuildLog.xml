@@ -2,13 +2,18 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>DW_TailsToys_Tarea1Mod3</Name>
-    <LastWriteTime>2025-08-10T21:32:40.1932785Z</LastWriteTime>
+    <LastWriteTime>2025-08-10T23:07:14.6995395Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Leer DimDate.dtsx</Name>
-      <LastWriteTime>2025-08-10T21:32:40.099541Z</LastWriteTime>
+      <LastWriteTime>2025-08-10T21:36:00.1428453Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Llenar DimProduct.dtsx</Name>
+      <LastWriteTime>2025-08-10T23:07:14.6500283Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

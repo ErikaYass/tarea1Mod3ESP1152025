@@ -2,6 +2,9 @@
 select * from dw.dim_date
 
 -- 
+USE DW_TailSpinToys2025
+GO
+
 INSERT INTO [dw].[dim_product] (
       product_bk,
       product_sku,

@@ -11,19 +11,19 @@
   DTS:LocaleID="22538"
   DTS:ObjectName="Leer DimDate"
   DTS:PackageType="5"
-  DTS:VersionBuild="4"
-  DTS:VersionGUID="{7078AE19-D484-4F7D-A217-4A43EF8ABD44}">
+  DTS:VersionBuild="5"
+  DTS:VersionGUID="{3C7AAA38-1979-49E8-AA53-CBC1DD77B27D}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.DW_TailSpinToys2025]"
       DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
-      DTS:DTSID="{0BC0EC80-F9AF-4436-B6CE-236F1C802D54}"
+      DTS:DTSID="{3BBAFF16-4D76-401D-B3D2-95BF64BC48D5}"
       DTS:ObjectName="(localdb)\MSSQLLocalDB.DW_TailSpinToys2025">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DW_TailSpinToys2025;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-Leer DimDate-{0BC0EC80-F9AF-4436-B6CE-236F1C802D54}(localdb)\MSSQLLocalDB.DW_TailSpinToys2025;" />
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DW_TailSpinToys2025;Integrated Security=True;Application Name=SSIS-Leer DimDate-{3BBAFF16-4D76-401D-B3D2-95BF64BC48D5}(localdb)\MSSQLLocalDB.DW_TailSpinToys2025;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -145,8 +145,8 @@
               <connections>
                 <connection
                   refId="Package\leer dimDate csv\Destino de ADO NET.Connections[IDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.DW_TailSpinToys2025]"
-                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.DW_TailSpinToys2025]"
+                  connectionManagerID="{0BC0EC80-F9AF-4436-B6CE-236F1C802D54}:invalid"
+                  connectionManagerRefId="{0BC0EC80-F9AF-4436-B6CE-236F1C802D54}:invalid"
                   description="Administrador de conexiones administrado"
                   name="IDbConnection" />
               </connections>
@@ -534,13 +534,5 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\leer dimDate csv\Destino de ADO NET">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
 </Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>
