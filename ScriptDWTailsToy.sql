@@ -44,3 +44,13 @@ CREATE TABLE dw.dim_state (
 
 );
 GO
+
+-- Creación de DIM REGION
+
+CREATE TABLE dw.dim_region (
+    region_sk INT IDENTITY(1,1) PRIMARY KEY,
+    region_bk INT NOT NULL, -- RegionID del origen
+    region_name NVARCHAR(50) NOT NULL,
+
+);
+GO
