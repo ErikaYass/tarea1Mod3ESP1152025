@@ -26,3 +26,12 @@ WHERE NOT EXISTS (
       FROM [dw].[dim_product] dp
       WHERE dp.product_bk = p.ProductID
 );
+
+
+--llenado dim region
+SELECT DISTINCT
+      r.RegionID AS region_bk,
+      r.RegionName AS region_name
+FROM [TailspinToys2020-US].dbo.Region r
+
+--llenado dim

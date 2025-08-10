@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9C02B54C-06B4-2D2A-456E-B64836D75A09}|DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3.dtproj|C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Llenar Dim_region.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
+      "RelativeMoniker": "D:0:0:{9C02B54C-06B4-2D2A-456E-B64836D75A09}|DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3.dtproj|solutionrelative:DW_TailsToys_Tarea1Mod3\\Llenar Dim_region.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9C02B54C-06B4-2D2A-456E-B64836D75A09}|DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3.dtproj|C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Llenar Dim_product.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design",
       "RelativeMoniker": "D:0:0:{9C02B54C-06B4-2D2A-456E-B64836D75A09}|DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3.dtproj|solutionrelative:DW_TailsToys_Tarea1Mod3\\Llenar Dim_product.dtsx||{CC84AFBD-DA02-46F4-8623-9F07E5569EDB}|Design"
     },
@@ -23,6 +27,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Llenar Dim_region.dtsx [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Llenar Dim_region.dtsx",
+              "RelativeDocumentMoniker": "DW_TailsToys_Tarea1Mod3\\Llenar Dim_region.dtsx",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Llenar Dim_region.dtsx [Dise\u00F1o]",
+              "RelativeToolTip": "DW_TailsToys_Tarea1Mod3\\Llenar Dim_region.dtsx [Dise\u00F1o]",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
+              "WhenOpened": "2025-08-10T23:40:21.731Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Llenar Dim_product.dtsx [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Llenar Dim_product.dtsx",
               "RelativeDocumentMoniker": "DW_TailsToys_Tarea1Mod3\\Llenar Dim_product.dtsx",
@@ -34,15 +50,14 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Llenar CSV.dtsx [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Llenar CSV.dtsx",
               "RelativeDocumentMoniker": "DW_TailsToys_Tarea1Mod3\\Llenar CSV.dtsx",
               "ToolTip": "C:\\Users\\Admin\\Documents\\GitHub\\tarea1Mod3ESP1152025\\DW_TailsToys_Tarea1Mod3\\DW_TailsToys_Tarea1Mod3\\Llenar CSV.dtsx [Dise\u00F1o]",
               "RelativeToolTip": "DW_TailsToys_Tarea1Mod3\\Llenar CSV.dtsx [Dise\u00F1o]",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFTSURBVDhPY2QAgqUbD/8H0bjAu49fGG7fvZ8\u002BqTFrFlQIAv7/h\u002BgDGfDv71\u002BcePKi7f9NPZP/59VPSwNrQAJMUJogaK0pZDh\u002B6uxMdEOINqC6pR9MgwwBM6CABUqDQcWCa1AWA0NHghac//k9G0NcZAiYvWj5GjANAxgu\u002BC2rAcYwAGJz6NkxZEe7QUVQAYYBrI9vgDEMwPhffkEFsAFCsfDp\u002B9//D98jYgOqDQwIBiLI5vc/GBjefP/PwMLGARVFABQDQIEGwyCArPnNdwaGf1iSG85ARNb8\u002BhsDwweQAb\u002BBAmgAZyAia371lYHh7MnrDI9/yzA4hhQwlM29/J/BeCbYPSjpABT3MJvf//jP8BZoK4j95TfE7SD5hy\u002B\u002BMFy5846hCyyCZMDUpbugLFxABq75zPU3UDGoAaDchp7C0AHI6TDNyAaAszNRAOpnFHA2nREAjMTvHMVXB8cAAAAASUVORK5CYII=",
-              "WhenOpened": "2025-08-10T23:11:09.232Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-08-10T23:11:09.232Z"
             }
           ]
         }
