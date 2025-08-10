@@ -26,27 +26,27 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-02LSLTQ</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9lsJbE5+H0GR0dF8EMDrywAAAAACAAAAAAAQZgAAAAEAACAAAAD3lcw35aEKOVBroU51hQah11Sjzz4buPrn3UVYW8rF9gAAAAAOgAAAAAIAACAAAADHL5unL2a9Cr1CdUoNnTYE1KELDSwIW0g5kjgsK+1Tb5AAAAAHLRrNVILbK4RJX7MQNf30RJx1nEAv075jkGjXFYGfuhKvI5NAxAMEGpGs3jF3RwKB5m03xS75NNc0KyVXYt1hIpcueLO4RA1MMzIY23r5mIMq4beXngh5VBC0YN77rV4xOfTu4C/vdmmg0bIwgmA9srYn9v4yYFHv2oGIUYMAIF0HOFa5LGcK+JBjJ5E0421AAAAAqc+wvVjN+JawvoU4Kk61lzAIsz4tiCdVfokyEqV7FGN+j2d7Sdq0p0Gh9QEFOBbK5GcFiwbersvqjSlTvlmD1w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA9lsJbE5+H0GR0dF8EMDrywAAAAACAAAAAAAQZgAAAAEAACAAAAC7VVBvs6nmi6ckoX2KTKD+OdQReDybQGbx4HWjlo4zWwAAAAAOgAAAAAIAACAAAAD8Bjf5E1HTFUHRSCesRDiLZd4Wz2AFMi2nxTLgREMoUZAAAADylRY2y26lm0SajC5wut2vUYAVt2pzmZ8pN/ui2gfZFEog+4spWxRgBz2sWMW4fL/P6xIZ/fLFBT6XRFuAcqdz3Iu1SsQi7GWzy44UuDvoPnnBWKOGx/dSbXWtHPdXABmC8fi1RSX6PPb0xW8WKi+UM27mXxOZinRLBL6ysxYSabvNJh4/Fsuh6WbvA7k71VtAAAAAnrupd2yrwU1+z+5oq18SK6pIE4LNZU8JKYlgd53VK9eXkz+ngxE53E5yentcNN0LosMO+Fpt1fQHfdA9sSB0LA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
-          <SSIS:Package SSIS:Name="Leer DimDate.dtsx" SSIS:EntryPoint="1" />
-          <SSIS:Package SSIS:Name="Llenar DimProduct.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Llenar CSV.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="Llenar Dim_product.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
           <SSIS:ProjectConnectionParameters />
           <SSIS:PackageInfo>
-            <SSIS:PackageMetaData SSIS:Name="Leer DimDate.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Llenar CSV.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{F24DC218-C029-490B-BFB7-19BD1B66FF44}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Leer DimDate</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{5C5CD6D4-C843-416F-8A82-96805BE68825}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Llenar CSV</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">4</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">3</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{7078AE19-D484-4F7D-A217-4A43EF8ABD44}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{9565E19D-EFB9-483C-8D49-6B16352F10C0}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -79,7 +79,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DW_TailSpinToys2025;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-Leer DimDate-{0BC0EC80-F9AF-4436-B6CE-236F1C802D54}(localdb)\MSSQLLocalDB.DW_TailSpinToys2025;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DW_TailSpinToys2025;Integrated Security=True;Application Name=SSIS-Llenar CSV-{D24B3F5F-9F05-4529-BF7D-87E92471313B}(localdb)\MSSQLLocalDB.DW_TailSpinToys2025;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -171,7 +171,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.AlwaysCheckForRowDelimiters">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.AlwaysCheckForRowDelimiters">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -186,7 +186,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.CodePage">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.CodePage">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -201,7 +201,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.ColumnNamesInFirstDataRow">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.ColumnNamesInFirstDataRow">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -216,7 +216,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.ConnectByProxy">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.ConnectByProxy">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -231,7 +231,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -246,7 +246,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.DataRowsToSkip">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.DataRowsToSkip">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -261,7 +261,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.Format">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.Format">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -276,7 +276,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.HeaderRowDelimiter">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.HeaderRowDelimiter">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -291,7 +291,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.HeaderRowsToSkip">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.HeaderRowsToSkip">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -306,7 +306,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.LocaleID">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.LocaleID">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -321,7 +321,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.RowDelimiter">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.RowDelimiter">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -337,7 +337,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.TextQualifier">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.TextQualifier">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -352,7 +352,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.cargar dimDate csv.Unicode">
+                <SSIS:Parameter SSIS:Name="CM.Llenar dimDate csv.Unicode">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -369,16 +369,16 @@
                 </SSIS:Parameter>
               </SSIS:Parameters>
             </SSIS:PackageMetaData>
-            <SSIS:PackageMetaData SSIS:Name="Llenar DimProduct.dtsx">
+            <SSIS:PackageMetaData SSIS:Name="Llenar Dim_product.dtsx">
               <SSIS:Properties>
-                <SSIS:Property SSIS:Name="ID">{C858F516-113F-4137-8CB2-3EF4A9B38A63}</SSIS:Property>
-                <SSIS:Property SSIS:Name="Name">Llenar DimProduct</SSIS:Property>
+                <SSIS:Property SSIS:Name="ID">{DD278700-7AFD-4F70-B0C3-4F185C46066A}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">Llenar Dim_product</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">5</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{5F77E410-F7B8-4B27-AE70-1C2FFC8420E2}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{927CADE1-EAF2-4ED1-A6F6-32AC9E54FC57}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -411,7 +411,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DW_TailSpinToys2025;Integrated Security=True;TrustServerCertificate=True;Application Name=SSIS-Llenar DimProduct-{1A3A4AA1-A57F-41F7-861E-C410CF4A6C2E}(localdb)\MSSQLLocalDB.DW_TailSpinToys2025;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DW_TailSpinToys2025;Integrated Security=True;Application Name=SSIS-Llenar Dim_product-{12B7B551-4BA6-4495-AA63-57FB0E5EA83B}(localdb)\MSSQLLocalDB.DW_TailSpinToys2025;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -529,7 +529,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TailspinToys2020-US;Integrated Security=True;Application Name="SSIS-Llenar DimProduct-{6AC20344-5637-4D43-A954-BE19E29562B2}(localdb)\MSSQLLocalDB.TailspinToys2020-US";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TailspinToys2020-US;Integrated Security=True;Application Name=SSIS-Llenar Dim_product-{AF249BE8-E1D0-4451-8EAB-9A59D111D7F2}(localdb)\MSSQLLocalDB.TailspinToys2020-US;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
