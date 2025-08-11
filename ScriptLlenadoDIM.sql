@@ -5,6 +5,7 @@ select * from dw.dim_date
 USE DW_TailSpinToys2025
 GO
 
+-- Visualización de datos en DIM PRODUCT
 INSERT INTO [dw].[dim_product] (
       product_bk,
       product_sku,
@@ -27,11 +28,23 @@ WHERE NOT EXISTS (
       WHERE dp.product_bk = p.ProductID
 );
 
-
---llenado dim region
+-- Visualización de datos DIM REGION
+INSERT INTO DW_TailSpinToys2025.dw.dim_region (
+      region_bk,
+      region_name
+)
 SELECT DISTINCT
       r.RegionID AS region_bk,
       r.RegionName AS region_name
 FROM [TailspinToys2020-US].dbo.Region r
+WHERE NOT EXISTS (
+      SELECT 1
+      FROM DW_TailSpinToys2025.dw.dim_region dr
+      WHERE dr.region_bk = r.RegionID
+);
 
---llenado dim
+
+-- Visualización de datos DIM STATE
+
+
+-- Visualización de datos FACT SALES
