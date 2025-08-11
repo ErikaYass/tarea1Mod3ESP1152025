@@ -65,5 +65,33 @@ WHERE NOT EXISTS (
       WHERE ds.state_bk = s.StateID
 );
 
-
 -- Visualización de datos FACT SALES
+SELECT 
+    ROW_NUMBER() OVER (ORDER BY s.OrderNumber) AS sales_id,
+    s.OrderNumber AS order_number,
+    d.date_key,
+    p.product_sk,
+    st.state_sk,
+    r.region_sk,
+    s.Quantity,
+    s.UnitPrice,
+    s.DiscountAmount,
+    (s.Quantity * s.UnitPrice) - s.DiscountAmount AS total_amount
+FROM [TailspinToys2020-US].dbo.Sales s
+
+    -- Join con dimensión fecha
+    INNER JOIN dw.dim_date d
+        ON d.date_key = CONVERT(INT, FORMAT(s.OrderDate, 'yyyyMMdd'))
+
+    -- Join con dimensión producto usando la business key
+    INNER JOIN dw.dim_product p
+        ON p.product_bk = s.ProductID
+
+    -- Join con dimensión estado usando la business key
+    INNER JOIN dw.dim_state st
+        ON st.state_bk = s.CustomerStateID
+
+    -- Join con dimensión región
+    INNER JOIN dw.dim_region r
+        ON r.region_sk = st.region_sk;
+GO
