@@ -43,8 +43,27 @@ WHERE NOT EXISTS (
       WHERE dr.region_bk = r.RegionID
 );
 
-
 -- Visualización de datos DIM STATE
+
+INSERT INTO DW_TailSpinToys2025.dw.dim_state (
+      state_bk,
+      state_code,
+      state_name,
+      time_zone
+)
+SELECT DISTINCT
+      s.StateID AS state_bk,
+      s.StateCode AS state_code,
+      s.StateName AS state_name,
+      s.TimeZone AS time_zone
+FROM [TailspinToys2020-US].dbo.State s
+JOIN DW_TailSpinToys2025.dw.dim_region r
+      ON s.RegionID = r.region_bk  -- Solo carga si la región ya está en dim_region
+WHERE NOT EXISTS (
+      SELECT 1
+      FROM DW_TailSpinToys2025.dw.dim_state ds
+      WHERE ds.state_bk = s.StateID
+);
 
 
 -- Visualización de datos FACT SALES
