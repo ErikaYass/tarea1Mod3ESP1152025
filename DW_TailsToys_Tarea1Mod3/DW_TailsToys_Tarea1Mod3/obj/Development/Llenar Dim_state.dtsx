@@ -11,8 +11,8 @@
   DTS:LocaleID="22538"
   DTS:ObjectName="Llenar Dim_state"
   DTS:PackageType="5"
-  DTS:VersionBuild="1"
-  DTS:VersionGUID="{591F350C-3CCC-442D-97D5-12658234E9AF}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{4F57A646-A5C4-4E22-8CD3-EE28B81556D1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -129,6 +129,12 @@
                       cachedName="time_zone"
                       externalMetadataColumnId="Package\Llenar datos de Dim State\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[time_zone]"
                       lineageId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[time_zone]" />
+                    <inputColumn
+                      refId="Package\Llenar datos de Dim State\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[region_sk]"
+                      cachedDataType="i4"
+                      cachedName="region_sk"
+                      externalMetadataColumnId="Package\Llenar datos de Dim State\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[region_sk]"
+                      lineageId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[region_sk]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -155,6 +161,10 @@
                       dataType="wstr"
                       length="10"
                       name="time_zone" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar datos de Dim State\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[region_sk]"
+                      dataType="i4"
+                      name="region_sk" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -197,14 +207,15 @@
                   description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT DISTINCT
-      s.StateID AS state_bk,
-      s.StateCode AS state_code,
-      s.StateName AS state_name,
-      s.TimeZone AS time_zone
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    s.StateID AS state_bk,
+    s.StateCode AS state_code,
+    s.StateName AS state_name,
+    s.TimeZone AS time_zone,
+    r.region_sk
 FROM [TailspinToys2020-US].dbo.State s
-JOIN DW_TailSpinToys2025.dw.dim_region r
-      ON s.RegionID = r.region_bk</property>
+INNER JOIN [DW_TailSpinToys2025].dw.dim_region r
+    ON r.region_bk = s.RegionID;</property>
                 <property
                   dataType="System.Int32"
                   description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
@@ -280,6 +291,15 @@ JOIN DW_TailSpinToys2025.dw.dim_region r
                       lineageId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[time_zone]"
                       name="time_zone"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[region_sk]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[region_sk]"
+                      lineageId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[region_sk]"
+                      name="region_sk"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -302,6 +322,10 @@ JOIN DW_TailSpinToys2025.dw.dim_region r
                       dataType="wstr"
                       length="10"
                       name="time_zone" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[region_sk]"
+                      dataType="i4"
+                      name="region_sk" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -332,6 +356,11 @@ JOIN DW_TailSpinToys2025.dw.dim_region r
                       length="10"
                       lineageId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[time_zone]"
                       name="time_zone" />
+                    <outputColumn
+                      refId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[region_sk]"
+                      dataType="i4"
+                      lineageId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[region_sk]"
+                      name="region_sk" />
                     <outputColumn
                       refId="Package\Llenar datos de Dim State\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
                       dataType="i4"
@@ -392,33 +421,33 @@ JOIN DW_TailSpinToys2025.dw.dim_region r
         <NodeLayout
           Size="183,42"
           Id="Package\Llenar datos de Dim State\Destino de ADO NET"
-          TopLeft="249.5,108.5" />
+          TopLeft="268,133" />
         <EdgeLayout
           Id="Package\Llenar datos de Dim State.Paths[Salida de origen de ADO NET]"
           TopLeft="95,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="246,61"
+              EndConnector="264.5,85.5"
               Start="0,0"
-              End="246,53.5">
+              End="264.5,78">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.5" />
+                    End="0,38.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,26.5"
-                    Point2="0,30.5"
-                    Point3="4,30.5" />
+                    Point1="0,38.75"
+                    Point2="0,42.75"
+                    Point3="4,42.75" />
                   <mssgle:LineSegment
-                    End="242,30.5" />
+                    End="260.5,42.75" />
                   <mssgle:CubicBezierSegment
-                    Point1="242,30.5"
-                    Point2="246,30.5"
-                    Point3="246,34.5" />
+                    Point1="260.5,42.75"
+                    Point2="264.5,42.75"
+                    Point3="264.5,46.75" />
                   <mssgle:LineSegment
-                    End="246,53.5" />
+                    End="264.5,78" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

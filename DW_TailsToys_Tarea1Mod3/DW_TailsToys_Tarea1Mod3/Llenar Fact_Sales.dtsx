@@ -11,8 +11,8 @@
   DTS:LocaleID="22538"
   DTS:ObjectName="Llenar Fact_Sales"
   DTS:PackageType="5"
-  DTS:VersionBuild="3"
-  DTS:VersionGUID="{20748CBD-65C6-4036-B867-EC2A2FFBC1AC}">
+  DTS:VersionBuild="4"
+  DTS:VersionGUID="{E0616B11-BBFB-46B5-8202-600F70DCED0A}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -623,7 +623,7 @@ FROM [TailspinToys2020-US].dbo.Sales s
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenar con datos a Fact Sales\Origen de ADO NET">
+    design-time-name="Package\Llenar con datos a Fact Sales\Destino de ADO NET">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -631,7 +631,7 @@ FROM [TailspinToys2020-US].dbo.Sales s
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Llenar con datos a Fact Sales\Destino de ADO NET">
+    design-time-name="Package\Llenar con datos a Fact Sales\Origen de ADO NET">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
