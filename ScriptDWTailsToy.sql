@@ -39,8 +39,10 @@ CREATE TABLE dw.dim_state (
     state_code NVARCHAR(2) NOT NULL,
     state_name NVARCHAR(50) NOT NULL,
     time_zone NVARCHAR(10) NOT NULL,
-
+  
 );
+ ALTER TABLE [dw].[dim_state]
+    ADD region_sk INT NULL;
 GO
 
 -- Creación de DIM REGION

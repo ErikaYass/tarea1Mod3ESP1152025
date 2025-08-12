@@ -95,3 +95,5 @@ FROM [TailspinToys2020-US].dbo.Sales s
     INNER JOIN dw.dim_region r
         ON r.region_sk = st.region_sk;
 GO
+
+
