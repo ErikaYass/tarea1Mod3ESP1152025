@@ -79,15 +79,15 @@ SELECT
     (s.Quantity * s.UnitPrice) - s.DiscountAmount AS total_amount
 FROM [TailspinToys2020-US].dbo.Sales s
 
-    -- Join con dimensión fecha
-    INNER JOIN dw.dim_date d
-        ON d.date_key = CONVERT(INT, FORMAT(s.OrderDate, 'yyyyMMdd'))
+    -- Join con dimensión fecha (OrderDate en formato AAAAMMDD)
+   INNER JOIN dw.dim_date d
+    ON d.[date] = FORMAT(s.OrderDate, 'yyyyMMdd')
 
-    -- Join con dimensión producto usando la business key
+    -- Join con dimensión producto (BK = ProductID)
     INNER JOIN dw.dim_product p
         ON p.product_bk = s.ProductID
 
-    -- Join con dimensión estado usando la business key
+    -- Join con dimensión estado (BK = CustomerStateID)
     INNER JOIN dw.dim_state st
         ON st.state_bk = s.CustomerStateID
 
