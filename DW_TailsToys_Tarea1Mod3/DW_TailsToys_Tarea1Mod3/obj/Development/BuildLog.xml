@@ -2,18 +2,13 @@
 <BuildLog xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <ProjectInfo>
     <Name>DW_TailsToys_Tarea1Mod3</Name>
-    <LastWriteTime>2025-08-11T02:51:22.6971559Z</LastWriteTime>
+    <LastWriteTime>2025-08-12T03:47:28.0057941Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Llenar CSV.dtsx</Name>
       <LastWriteTime>2025-08-10T23:23:29.3634343Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>Llenar Dim_product.dtsx</Name>
-      <LastWriteTime>2025-08-10T23:25:28.3089973Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -24,6 +19,16 @@
     <ProjectBuildItemInfo>
       <Name>Llenar Dim_state.dtsx</Name>
       <LastWriteTime>2025-08-11T02:51:17.0458244Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Leer Dim_product.dtsx</Name>
+      <LastWriteTime>2025-08-11T04:16:15.5107639Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Llenar Fact_Sales.dtsx</Name>
+      <LastWriteTime>2025-08-12T03:50:16.0751203Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

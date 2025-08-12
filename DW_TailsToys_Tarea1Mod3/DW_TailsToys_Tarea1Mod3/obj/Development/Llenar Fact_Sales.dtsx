@@ -1,0 +1,642 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="8/11/2025 9:38:58 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-02LSLTQ"
+  DTS:CreatorName="DESKTOP-02LSLTQ\Admin"
+  DTS:DTSID="{4DBC7486-01B7-4923-8A1A-D73FE6B96C69}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.2"
+  DTS:LocaleID="22538"
+  DTS:ObjectName="Llenar Fact_Sales"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{20748CBD-65C6-4036-B867-EC2A2FFBC1AC}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.DW_TailSpinToys2025]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{FDA9D62A-CC66-4D77-8B3A-4CDC97F27E57}"
+      DTS:ObjectName="(localdb)\MSSQLLocalDB.DW_TailSpinToys2025">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DW_TailSpinToys2025;Integrated Security=True;Application Name=SSIS-Llenar Fact_Sales-{FDA9D62A-CC66-4D77-8B3A-4CDC97F27E57}(localdb)\MSSQLLocalDB.DW_TailSpinToys2025;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TailspinToys2020-US]"
+      DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"
+      DTS:DTSID="{CB7B5D85-CCE3-49DE-B95B-30E51BC08002}"
+      DTS:ObjectName="(localdb)\MSSQLLocalDB.TailspinToys2020-US">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=TailspinToys2020-US;Integrated Security=True;Application Name=SSIS-Llenar Fact_Sales-{CB7B5D85-CCE3-49DE-B95B-30E51BC08002}(localdb)\MSSQLLocalDB.TailspinToys2020-US;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Llenar con datos a Fact Sales"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{2C9F4FE8-F620-4698-BF89-608D4935F972}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Llenar con datos a Fact Sales"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;2"
+              description="Carga datos en una base de datos compatible con ADO.NET que use una vista o tabla de base de datos. Se cargan datos en una tabla nueva o existente. Por ejemplo, se usa un proveedor ADO.NET para ODBC para cargar datos en un destino ODBC."
+              name="Destino de ADO NET"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de destino."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">"dw"."fact_sales"</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifique el número de filas por lote. El valor predeterminado es 0, que utiliza el mismo tamaño que el búfer interno de SSIS. "
+                  expressionType="Notify"
+                  name="BatchSize">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito. "
+                  expressionType="Notify"
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica si se debe usar la interfaz SqlBulkCopy para mejorar el rendimiento de las operaciones de inserción masiva. No todos los proveedores admiten esta interfaz."
+                  expressionType="Notify"
+                  name="UseBulkInsertWhenPossible">true</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ADONETDestination</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.DW_TailSpinToys2025]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.DW_TailSpinToys2025]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de ADO NET">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[sales_id]"
+                      cachedDataType="i8"
+                      cachedName="sales_id"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[sales_id]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[sales_id]" />
+                    <inputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[order_number]"
+                      cachedDataType="wstr"
+                      cachedLength="10"
+                      cachedName="order_number"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[order_number]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[order_number]" />
+                    <inputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[date_key]"
+                      cachedDataType="i4"
+                      cachedName="date_key"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[date_key]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[date_key]" />
+                    <inputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[product_sk]"
+                      cachedDataType="i4"
+                      cachedName="product_sk"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[product_sk]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[product_sk]" />
+                    <inputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[state_sk]"
+                      cachedDataType="i4"
+                      cachedName="state_sk"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[state_sk]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[state_sk]" />
+                    <inputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[region_sk]"
+                      cachedDataType="i4"
+                      cachedName="region_sk"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[region_sk]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[region_sk]" />
+                    <inputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[Quantity]"
+                      cachedDataType="i4"
+                      cachedName="Quantity"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[quantity]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Quantity]" />
+                    <inputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[UnitPrice]"
+                      cachedDataType="numeric"
+                      cachedName="UnitPrice"
+                      cachedPrecision="9"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[unit_price]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].Columns[DiscountAmount]"
+                      cachedDataType="numeric"
+                      cachedName="DiscountAmount"
+                      cachedPrecision="9"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[discount_amount]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[DiscountAmount]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[sales_id]"
+                      dataType="i8"
+                      name="sales_id" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[order_number]"
+                      dataType="wstr"
+                      length="10"
+                      name="order_number" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[date_key]"
+                      dataType="i4"
+                      name="date_key" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[product_sk]"
+                      dataType="i4"
+                      name="product_sk" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[state_sk]"
+                      dataType="i4"
+                      name="state_sk" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[region_sk]"
+                      dataType="i4"
+                      name="region_sk" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[quantity]"
+                      dataType="i4"
+                      name="quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[unit_price]"
+                      dataType="numeric"
+                      name="unit_price"
+                      precision="9"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[discount_amount]"
+                      dataType="numeric"
+                      name="discount_amount"
+                      precision="9"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET].ExternalColumns[total_amount]"
+                      dataType="numeric"
+                      name="total_amount"
+                      precision="21"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de ADO NET"
+                  synchronousInputId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Outputs[Salida de error de destino de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Origen de ADO NET"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT 
+    ROW_NUMBER() OVER (ORDER BY s.OrderNumber) AS sales_id,
+    s.OrderNumber AS order_number,
+    d.date_key,
+    p.product_sk,
+    st.state_sk,
+    r.region_sk,
+    s.Quantity,
+    s.UnitPrice,
+    s.DiscountAmount,
+    (s.Quantity * s.UnitPrice) - s.DiscountAmount AS total_amount
+FROM [TailspinToys2020-US].dbo.Sales s
+
+   INNER JOIN [DW_TailSpinToys2025].dw.dim_date d
+    ON d.[date] = FORMAT(s.OrderDate, 'yyyyMMdd')
+
+    INNER JOIN [DW_TailSpinToys2025].dw.dim_product p
+        ON p.product_bk = s.ProductID
+
+    INNER JOIN [DW_TailSpinToys2025].dw.dim_state st
+        ON st.state_bk = s.CustomerStateID
+
+    INNER JOIN [DW_TailSpinToys2025].dw.dim_region r
+        ON r.region_sk = st.region_sk;</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Connections[IDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TailspinToys2020-US]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.TailspinToys2020-US]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[sales_id]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[sales_id]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[sales_id]"
+                      name="sales_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[order_number]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[order_number]"
+                      length="10"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[order_number]"
+                      name="order_number"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[date_key]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[date_key]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[date_key]"
+                      name="date_key"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[product_sk]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[product_sk]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[product_sk]"
+                      name="product_sk"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[state_sk]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[state_sk]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[state_sk]"
+                      name="state_sk"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[region_sk]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[region_sk]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[region_sk]"
+                      name="region_sk"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Quantity]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Quantity]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[Quantity]"
+                      name="Quantity"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[UnitPrice]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[UnitPrice]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      precision="9"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[DiscountAmount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[DiscountAmount]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[DiscountAmount]"
+                      name="DiscountAmount"
+                      precision="9"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[total_amount]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[total_amount]"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].Columns[total_amount]"
+                      name="total_amount"
+                      precision="21"
+                      scale="2"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[sales_id]"
+                      dataType="i8"
+                      name="sales_id" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[order_number]"
+                      dataType="wstr"
+                      length="10"
+                      name="order_number" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[date_key]"
+                      dataType="i4"
+                      name="date_key" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[product_sk]"
+                      dataType="i4"
+                      name="product_sk" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[state_sk]"
+                      dataType="i4"
+                      name="state_sk" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[region_sk]"
+                      dataType="i4"
+                      name="region_sk" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[Quantity]"
+                      dataType="i4"
+                      name="Quantity" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[UnitPrice]"
+                      dataType="numeric"
+                      name="UnitPrice"
+                      precision="9"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[DiscountAmount]"
+                      dataType="numeric"
+                      name="DiscountAmount"
+                      precision="9"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET].ExternalColumns[total_amount]"
+                      dataType="numeric"
+                      name="total_amount"
+                      precision="21"
+                      scale="2" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[sales_id]"
+                      dataType="i8"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[sales_id]"
+                      name="sales_id" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[order_number]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[order_number]"
+                      name="order_number" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[date_key]"
+                      dataType="i4"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[date_key]"
+                      name="date_key" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[product_sk]"
+                      dataType="i4"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[product_sk]"
+                      name="product_sk" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[state_sk]"
+                      dataType="i4"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[state_sk]"
+                      name="state_sk" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[region_sk]"
+                      dataType="i4"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[region_sk]"
+                      name="region_sk" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Quantity]"
+                      dataType="i4"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[Quantity]"
+                      name="Quantity" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[UnitPrice]"
+                      dataType="numeric"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[UnitPrice]"
+                      name="UnitPrice"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[DiscountAmount]"
+                      dataType="numeric"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[DiscountAmount]"
+                      name="DiscountAmount"
+                      precision="9"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[total_amount]"
+                      dataType="numeric"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[total_amount]"
+                      name="total_amount"
+                      precision="21"
+                      scale="2" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Llenar con datos a Fact Sales.Paths[Salida de origen de ADO NET]"
+              endId="Package\Llenar con datos a Fact Sales\Destino de ADO NET.Inputs[Entrada de destino de ADO NET]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Llenar con datos a Fact Sales\Origen de ADO NET.Outputs[Salida de origen de ADO NET]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta sección CDATA contiene la información de diseño del paquete. Esta sección incluye información como, por ejemplo, las coordenadas (x,y), el ancho y el alto.-->
+<!--Si edita manualmente esta sección y comete un error, puede eliminarlo. -->
+<!--El paquete podrá cargarse normalmente, pero se perderá la información de diseño anterior y el diseñador reorganizará los elementos automáticamente en la superficie de diseño.-->
+<Objects
+  Version="8">
+  <!--Cada uno de los nodos siguientes contiene propiedades que no afectan al comportamiento en tiempo de ejecución.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="224,42"
+          Id="Package\Llenar con datos a Fact Sales"
+          TopLeft="116,31" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Llenar con datos a Fact Sales">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="179,42"
+          Id="Package\Llenar con datos a Fact Sales\Origen de ADO NET"
+          TopLeft="132,54" />
+        <NodeLayout
+          Size="183,42"
+          Id="Package\Llenar con datos a Fact Sales\Destino de ADO NET"
+          TopLeft="415,143" />
+        <EdgeLayout
+          Id="Package\Llenar con datos a Fact Sales.Paths[Salida de origen de ADO NET]"
+          TopLeft="221.5,96">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="285,47"
+              Start="0,0"
+              End="285,39.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5"
+                    Point2="0,23.5"
+                    Point3="4,23.5" />
+                  <mssgle:LineSegment
+                    End="281,23.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="281,23.5"
+                    Point2="285,23.5"
+                    Point3="285,27.5" />
+                  <mssgle:LineSegment
+                    End="285,39.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenar con datos a Fact Sales\Origen de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Llenar con datos a Fact Sales\Destino de ADO NET">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
